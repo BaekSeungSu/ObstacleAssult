@@ -16,6 +16,11 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	MyInt = 9;
+
+	APlusB = InputA + InputB;
+	FAPlusFB = InputFA + InputFB;
+
 }
 
 // Called every frame
