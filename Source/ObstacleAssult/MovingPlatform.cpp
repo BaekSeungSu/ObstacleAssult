@@ -22,18 +22,14 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	FVector LocalVector = MyVector;
-
-	LocalVector.Z = LocalVector.Z + 100;
-
-	MyVector.Y = MyVector.Y + 1;
-
-	SetActorLocation(LocalVector);
-
 	// Move platform forwads
 		// Get current location
+	FVector CurrentLocation = GetActorLocation();
 		// Add vector to that location
+	CurrentLocation.X += 1;
+	CurrentLocation.Y += 1;
 		// Set the location
+	SetActorLocation(CurrentLocation);
 	// Send platform back if gone too far
 		// Check how far we've moved
 		// Reverse direction of motion if gone too far
