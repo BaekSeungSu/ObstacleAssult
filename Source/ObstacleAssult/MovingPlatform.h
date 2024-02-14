@@ -11,7 +11,7 @@ class OBSTACLEASSULT_API AMovingPlatform : public AActor
 {
 	GENERATED_BODY()
 	
-public:	
+public:
 	// Sets default values for this actor's properties
 	AMovingPlatform();
 
@@ -23,6 +23,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+private:
 	FVector StartLocation;
 
 	UPROPERTY(EditAnywhere, Category="Moving Platform")
@@ -30,6 +31,6 @@ public:
 	UPROPERTY(EditAnywhere, Category="Moving Platform")
 	float MovedDistance = 100;
 
-
-
+	void MovePlatform(float Deltatime);
+	void RotatePlatform(float Deltatime);
 };
